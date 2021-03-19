@@ -7,11 +7,22 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    `gatsby-plugin-gatsby-cloud`,
+    'gatsby-plugin-gatsby-cloud',
     {
-      resolve: `gatsby-source-wordpress`,
+      resolve: 'gatsby-source-wordpress',
       options: {
-        url: process.env.WPGRAPHQL_URL || `https://stagingserver.payperhead.com/graphql`,
+        url: process.env.WPGRAPHQL_URL || 'https://stagingserver.payperhead.com/graphql',
+      },
+    },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "WPGraphQL",
+        fieldName: "wpcontent",
+        // GraphQL endpoint, relative to your WordPress home URL.
+        url: 'https://stagingserver.payperhead.com/graphql',
+        // GraphQL endpoint using env variable
+       // url: "${process.env.WORDPRESS_URL}/graphql",
       },
     },
   ],
