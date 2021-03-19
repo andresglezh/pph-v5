@@ -7,6 +7,7 @@
 module.exports = {
   /* Your site config here */
   plugins: [
+    'gatsby-plugin-gatsby-cloud',
     {
       resolve: 'gatsby-source-wordpress',
       options: {
