@@ -6,5 +6,12 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: 'gatsby-source-wordpress',
+      options: {
+        url: process.env.WPGRAPHQL_URL || 'https://stagingserver.payperhead.com/dev-2/graphql',
+      },
+    },
+  ],
 }
