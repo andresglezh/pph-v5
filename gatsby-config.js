@@ -12,13 +12,14 @@ module.exports = {
       resolve: 'gatsby-source-wordpress',
       options: {
         url: process.env.WPGRAPHQL_URL || 'https://stagingserver.payperhead.com/graphql',
+        minimizeDeprecationNotice: true,
       },
     },
     {
-      resolve: "gatsby-source-graphql",
+      resolve: 'gatsby-source-graphql',
       options: {
-        typeName: "WPGraphQL",
-        fieldName: "wpcontent",
+        typeName: 'WPGraphQL',
+        fieldName: 'wpcontent',
         // GraphQL endpoint, relative to your WordPress home URL.
         url: 'https://stagingserver.payperhead.com/graphql',
         // GraphQL endpoint using env variable
