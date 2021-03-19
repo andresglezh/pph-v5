@@ -11,7 +11,11 @@ module.exports = {
     {
       resolve: 'gatsby-source-wordpress',
       options: {
-        url: process.env.WPGRAPHQL_URL || 'https://stagingserver.payperhead.com/graphql',
+        baseUrl: 'preview-payperheadstatic.gtsb.io',
+        protocol: 'https',
+        hostingWPCOM: false,
+        useACF: true,
+        //url: process.env.WPGRAPHQL_URL || 'https://stagingserver.payperhead.com/graphql',
         minimizeDeprecationNotice: true,
       },
     },
