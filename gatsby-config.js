@@ -16,6 +16,7 @@ module.exports = {
         hostingWPCOM: false,
         useACF: true,
         //url: process.env.WPGRAPHQL_URL || 'https://stagingserver.payperhead.com/graphql',
+        url: 'https://stagingserver.payperhead.com/graphql',
         minimizeDeprecationNotice: true,
       },
     },
