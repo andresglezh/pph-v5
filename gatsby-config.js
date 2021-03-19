@@ -7,11 +7,11 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    'gatsby-plugin-gatsby-cloud',
+    `gatsby-plugin-gatsby-cloud`,
     {
-      resolve: 'gatsby-source-wordpress',
+      resolve: `gatsby-source-wordpress`,
       options: {
-        url: process.env.WPGRAPHQL_URL || 'https://stagingserver.payperhead.com/dev-2/graphql',
+        url: process.env.WPGRAPHQL_URL || `https://stagingserver.payperhead.com/graphql`,
       },
     },
   ],
